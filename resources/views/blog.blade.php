@@ -11,5 +11,10 @@
   </style>
   <body>
     <h1>BLOG</h1>
+    <p>php.ini, ma veramente?</p>
+    @foreach ($posts as $value)
+      <h2>{{$value->title}}</h2>
+      <p>{{$value->body}}</p>
+    @endforeach
   </body>
 </html>
