@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <style media="screen">
-    *{
-      background-color: blue;
-    }
-  </style>
-  <body>
-    <h1>BLOG</h1>
-    <p>php.ini, ma veramente?</p>
-    @foreach ($posts as $value)
-      <h2>{{$value->title}}</h2>
-      <p>{{$value->body}}</p>
-    @endforeach
-  </body>
-</html>
+@extends('layout.app')
+
+@section('headTitle')
+  Blog
+@endsection
+
+@section('main')
+  <h1>BLOG</h1>
+  <p>Non so contento de fa sta sfilata</p>
+  @foreach ($posts as $value)
+    <h2>{{$value->title}}</h2>
+    <p>{{$value->body}}</p>
+  @endforeach
+@endsection
+
+<style media="screen">
+  *{
+    background-color: blue;
+  }
+</style>
